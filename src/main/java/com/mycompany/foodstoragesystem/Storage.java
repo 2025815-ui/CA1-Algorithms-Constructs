@@ -10,11 +10,20 @@ import java.util.Deque;
  * @author yarzarmin
  */
 public class Storage {
-    private Deque<FoodItem> storage;
-    private int capacity = 8;
+    private Deque<FoodItem> storage; //Declare private deque variable
+    private int capacity = 8; //Make max capacity to 8
     
     public Storage(){
     storage = new ArrayDeque<>();
 }
+    //Adding food from the front in storage
+    public void addFood(FoodItem item){
+        //Checking if the storage is full or not
+        if(storage.size() == capacity){
+            System.out.println("Storage is full !!");
+        }
+        storage.addFirst(item);//Adding the item into storage
+        System.out.println("Food is added successfully!!");
+    }
     
 }
