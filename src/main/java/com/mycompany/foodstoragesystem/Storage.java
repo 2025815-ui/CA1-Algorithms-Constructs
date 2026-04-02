@@ -20,10 +20,31 @@ public class Storage {
     public void addFood(FoodItem item){
         //Checking if the storage is full or not
         if(storage.size() == capacity){
-            System.out.println("Storage is full !!");
+            System.out.println("Storage is full !!!");
+            return;
         }
         storage.addFirst(item);//Adding the item into storage
         System.out.println("Food is added successfully!!");
+    }
+    
+    //Removing item from the front (Stack behaviour)
+    public void removeFromFront(){
+        //Checking if the storage is empty
+        if(storage.isEmpty()){
+            System.out.println("Storage is Empty!!!");
+            return;
+        }
+        System.out.println("Item is removed. " + storage.removeFirst());
+    }
+    
+    //Removing item from Rear (Queue Behaviour)
+    public void removeFromRear(){
+        //Checking if the storage is empty
+        if(storage.isEmpty()){
+            System.out.println("Storage is Empty!!!");
+            return;
+        }
+        System.out.println("Item is removed. " + storage.removeLast());
     }
     
 }
