@@ -47,4 +47,26 @@ public class Storage {
         System.out.println("Item is removed. " + storage.removeLast());
     }
     
+    //Checking peek item in the storage
+    public void peek(){
+        //Checking if the storage is empty
+        if(storage.isEmpty()){
+            System.out.println("Storage is Empty!!!");
+            return;
+        }
+        System.out.println("The Top item is: " + storage.peek());
+    }
+    
+    //Display all item in the storage
+    public void displayAll(){
+        //Checkgin if the storage is empty
+        if(storage.isEmpty()){
+            System.out.println("Storage is Empty!!!");
+            return;
+        }
+        System.out.println("\nCurrent Storage are: ");
+        for(int i = 0; i < storage.size(); i++){
+            System.out.println(i);
+        }
+    }
 }
