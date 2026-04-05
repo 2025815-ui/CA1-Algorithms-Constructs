@@ -13,6 +13,7 @@ public class FoodStorageSystem {
     public static void main(String[] args) {
         
         Scanner input = new Scanner(System.in);
+        Storage storage = new Storage();
         
         while(true){
             System.out.println("\n=======MENU=======");
@@ -29,7 +30,45 @@ public class FoodStorageSystem {
             
             switch(choice){
                 case 1:
+                    System.out.println("Enter Food Name : ");
+                    String name = input.nextLine();
                     
+                    System.out.println("Enter Food Weight in gram : ");
+                    double weight = input.nextDouble();
+                    
+                    System.out.println("Enter Best Before Date YYYY-MM-DD : ");
+                    String date = input.next();
+                    
+                    
+                    storage.addFood(new FoodItem(name,weight,bestbeforedate));
+                    
+                    break;
+                    
+                case 2:
+                    storage.removeFromFront();
+                    break;
+                
+                case 3:
+                    storage.removeFromRear();;
+                    break;
+                    
+                case 4:
+                    storage.peek();
+                    break;
+                    
+                case 5:
+                    storage.displayAll();
+                    break;
+                    
+                case 6:
+                    System.out.println("Exiting Program....");
+                    input.close();
+                    break;
+                    
+                default:
+                    System.out.println("Invalid Option!!! Please Choose from the list.");
+                    break;
+                        
             }
            
             
