@@ -65,8 +65,8 @@ public class Storage {
             return;
         }
         System.out.println("\nCurrent Storage are: ");
-        for(int i = 0; i < storage.size(); i++){
-            System.out.println(i);
+        for(FoodItem item : storage){
+            System.out.println(item);
         }
     }
 }
