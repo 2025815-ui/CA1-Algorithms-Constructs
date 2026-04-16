@@ -11,7 +11,7 @@ import java.util.Deque;
  */
 public class Storage {
     private Deque<FoodItem> storage; //Declare private deque variable
-    private int capacity = 8; //Make max capacity to 8
+    private final int capacity = 8; //Make max capacity to 8
     
     public Storage(){
     storage = new ArrayDeque<>();

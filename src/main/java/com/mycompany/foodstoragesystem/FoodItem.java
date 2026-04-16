@@ -33,7 +33,7 @@ public class FoodItem {
     
     //this will automatically call when printing the object
     public String toString(){
-        return "Name: " + name +
+        return "\nName: " + name +
                 "\nWeight: " + weight + "g" +
                 "\nBest Before Date: " + bestbeforedate +
                 "\nStore At: "+ storedtime;

@@ -29,7 +29,7 @@ public class FoodStorageSystem {
 
             System.out.println("Enter Your Operation: ");
             int choice = input.nextInt();
-            input.nextLine();
+            input.nextLine(); //consume leftover newline
 
             switch (choice) {
                 case 1:
@@ -64,7 +64,7 @@ public class FoodStorageSystem {
                             break;
                         }
                         
-                        //checking if the date is within two weeks
+                        //checking if the date is within two weeks (14 days)
                         if (bestbefore.isAfter(today.plusDays(14))) {
                             System.out.println("Best-Before-Date must be within 2 weeks.");
                             break;
@@ -72,7 +72,7 @@ public class FoodStorageSystem {
                         storage.addFood(new FoodItem(name, weight, bestbefore));//add the food into the storage
 
                     } catch (Exception e) {
-                        System.out.println("Invalid date format !! Try YYYY-MM-DD");
+                        System.out.println("Invalid date format !! Try YYYY-MM-DD");//handle invalid date format
                     }
 
                     break;
@@ -97,14 +97,15 @@ public class FoodStorageSystem {
                 case 6:
                     System.out.println("Exiting Program....");
                     input.close();
-                    break;
+                    return;//exiting the program
 
                 default:
                     System.out.println("Invalid Option!!! Please Choose from the list.");
                     break;
 
             }
-
+          
         }
+       
     }
 }
